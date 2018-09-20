@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org" ng-app="app">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mail, calendar and address book as a service for developers.">
+    <meta name="author" content="Developermail">
+    <link rel="icon" href="/assets/img/favicon.ico">
+
+
+      <title>Developermail - Update account information</title>
+
+
+    <link href="/assets/css/styles.css?f6b4aaa" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/config.js"></script>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/assets/img/logo-fff.png" height="30" style="margin-top: -7px">
+        Developermail
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="top-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/features"><span>Features</span></a></li>
+        <li><a href="/pricing"><span>Pricing</span></a></li>
+        <li><a href="/security"><span>Security</span></a></li>
+        <li><a href="/docs" target="_blank"><span>Docs</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+    <div ng-controller="UpdateAccountCtrl">
+  <div class="main update-account" ng-show="state == 'init' || state == 'submit'">
+    <form>
+      <!-- <div class="container center"> -->
+      <!--   <div class="row"> -->
+      <!--   <div class="col&#45;md&#45;12"></div> -->
+      <!--     <h2>Update account information</h2> -->
+      <!--   </div> -->
+      <!-- </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h3>Account login</h3>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-1">
+            <div>Username</div>
+          </div>
+          <div class="col-md-9">
+            <div class="form-group">
+              <div class="username">
+                <div>
+                  <input type="text" ng-model="username" ng-change="checkLogin()" name="username" placeholder="examplecom" autofocus="autofocus" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-1">
+            <div>Password</div>
+          </div>
+          <div class="col-md-9">
+            <div class="form-group">
+              <div class="password">
+                <div>
+                  <input type="password" ng-model="password" ng-change="checkLogin()" name="password" placeholder="**********" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-9">
+            <p class="help-block">Please enter your account name and password (the same credentials you're using for Git)<span ng-bind="devmaildomain"></span></a>.</p>
+            <p class="help-block error" ng-show="typeof(login_error) != 'undefined'" ng-bind="login_error"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h3>Update credit card details <img src="/assets/img/solid@2x.png" style="width: 119px"></h3>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="form-group creditcard">
+              <div class="clearfix">
+                <input type="text" class="number" ng-class="{error: creditcard_number_error !== undefined}" name="number" ng-model="creditcard_number" ng-change="checkCreditCardNumber()" placeholder="Credit Card Number" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                <input type="text" class="expire" ng-class="{error: creditcard_expiry_error !== undefined}" name="expire_mm" ng-model="creditcard_expire_mm" ng-change="checkCreditCardExpiry()" ng-keydown="requireInt($event)" title="month of expiration" maxlength="2" placeholder="MM" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                <input type="text" class="expire" ng-class="{error: creditcard_expiry_error !== undefined}" name="expire_yy" ng-model="creditcard_expire_yy" ng-change="checkCreditCardExpiry()" ng-keydown="requireInt($event)" title="year of expiration" maxlength="4" placeholder="YYYY" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                <input type="text" class="cvc" ng-class="{error: creditcard_cvc_error !== undefined}" name="cvc" ng-model="creditcard_cvc" ng-change="checkCreditCardCVC()" title="Card Verification Code" ng-keydown="requireInt($event)" maxlength="4" placeholder="CVC" autocompletetype="off" autocorrect="off" spellcheck="off" autocapitalize="off" x-autocompletetype="off">
+                <select class="country" ng-model="countryCode" ng-class="{error: country_error !== undefined}" ng-change="checkCountry()">
+                  <option value="" disabled selected hidden>Country</option>
+                  <option ng-repeat="country in countryList" value="{{country[0]}}">{{country[1]}}</option>
+                </select>
+              </div>
+              <p class="help-block">
+                Please enter your <strong>credit card number</strong>, the <strong>month and year of expiration</strong>, <strong>verification code</strong> and your <strong>country</strong>.
+              </p>
+              <p class="help-block error" ng-show="typeof(creditcard_number_error) != 'undefined'" ng-bind="creditcard_number_error"></p>
+              <p class="help-block error" ng-show="typeof(creditcard_expiry_error) != 'undefined'" ng-bind="creditcard_expiry_error"></p>
+              <p class="help-block error" ng-show="typeof(creditcard_cvc_error) != 'undefined'" ng-bind="creditcard_cvc_error"></p>
+              <p class="help-block error" ng-show="typeof(country_error) != 'undefined'" ng-bind="country_error"></p>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="row center">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <button type="button" ng-click="submit()" class="btn btn-lg btn-primary">Update payment information &nbsp;<i class="fa fa-chevron-right"></i></button>
+            <p class="help-block error" ng-show="submit_error_msg.length > 0" ng-bind="submit_error_msg"></p>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="main update-account" ng-show="state == 'success'">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Thank you. Your account details where successfully updated!</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey(STRIPE_KEY);
+</script>
+
+
+    <div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <p><img src="/assets/img/logo-fff.png" height="20">Developermail</p>
+        <p>Copyright &copy; 2014-2018</p>
+        <img src="/assets/img/gb_flag.png" height="20"/> <a href="/terms">Terms and conditions</a> &amp; <a href="/privacy">Privacy</a><br/>
+        <img src="/assets/img/de_flag.png" height="20"/> <a href="/agb">AGB</a> &amp; <a href="/datenschutz">Datenschutzerklärung</a>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Product</h6>
+        <ul>
+          <li><a href="/pricing"><i class="fa fa-dollar"></i> Pricing</a></li>
+          <li><a href="/features"><i class="fa fa-gift"></i> Features</a></li>
+          <li><a href="/security"><i class="fa fa-shield"></i> Security</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/legal_notice"><i class="fa fa-legal"></i> Legal notice</a></li>
+          <li><a href="https://twitter.com/devmailio"><i class="fa fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Help</h6>
+        <ul>
+          <li><a href="/docs" target="_blank"><i class="fa fa-flag"></i> Getting started</a></li>
+          <li><a href="/support"><i class="fa fa-support"></i> Support</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript" src="/assets/js/main.js?f6b4aaa"></script>
+    <script type="text/javascript">
+      angular.module('app', ['app.pricing', 'app.update-account']);
+    </script>
+  </body>
+</html>

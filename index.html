@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org" ng-app="app">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mail, calendar and address book as a service for developers.">
+    <meta name="author" content="Developermail">
+    <link rel="icon" href="/assets/img/favicon.ico">
+
+
+      <title>Developermail</title>
+
+
+    <link href="/assets/css/styles.css?f6b4aaa" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/config.js"></script>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/assets/img/logo-fff.png" height="30" style="margin-top: -7px">
+        Developermail
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="top-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/features"><span>Features</span></a></li>
+        <li><a href="/pricing"><span>Pricing</span></a></li>
+        <li><a href="/security"><span>Security</span></a></li>
+        <li><a href="/docs" target="_blank"><span>Docs</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+    <div class="container-fluid teaser">
+  <div class="row">
+      <div class="col-sm-12">
+        <h1>Email and Calendar services, configured with Git</h1>
+        <p class="lead">
+          Full configuration control - Zero server administration.<br/>
+          A mailbox built for developers. And your domain.
+        </p>
+        <a class="btn btn-default" role="button" disabled>Sign up currently not available</a>
+      </div>
+  </div>
+</div>
+
+<div class="main home">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Email, Calendar &amp; Address book</h3>
+        <p>
+          You should be in full control over your mailbox. Developermail provides mailboxes that can
+          be configured as if they were self-hosted. Including things like <b>forwards</b>,
+          <b>aliases</b>, <b>catchalls</b> and <b>sieve filters</b>.
+          So start thinking about optimizing your mailbox and forget about time consuming server
+          adminstration.
+          Every mailbox comes with calendars, an address book and reminders.
+        </p>
+        <p><a href="/features#mail">Read more about our features.</a></p>
+      </div>
+      <div class="col-sm-6 center">
+        <img src="/assets/img/teaser-1.png" class="img-responsive teaser-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="terminal">
+          <div class="bar">1. Clone configuration repository</div>
+          <div class="sourceCode">
+            <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">git</span> clone https://developermail.io/git/examplecom</code></pre>
+          </div>
+        </div>
+        <br/>
+        <div class="terminal">
+          <div class="bar">2. Edit configuration</div>
+          <div class="sourceCode">
+            <pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="co"># config.yaml - Configuration file for chris@example.com</span>
+<span class="fu">example.com:</span>
+  <span class="fu">chris:</span>
+    <span class="fu">sieve:</span><span class="at"> sieve/default.sieve</span>
+    <span class="fu">forwards:</span><span class="at"> </span><span class="kw">[]</span>
+    <span class="fu">aliases:</span><span class="at"> </span><span class="kw">[</span>chris.smith<span class="kw">]</span></code></pre>
+          </div>
+        </div>
+        <br/>
+        <div class="terminal">
+          <div class="bar">3. Push changes. They're live immediately!</div>
+          <div class="sourceCode">
+            <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="fu">git</span> commit -am <span class="st">&#39;Add new aliases&#39;</span>
+$ <span class="fu">git</span> push
+<span class="ex">Counting</span> objects: 3, done.
+<span class="ex">Delta</span> compression using up to 8 threads.
+<span class="ex">Compressing</span> objects: 100% (3/3), <span class="kw">done</span><span class="ex">.</span>
+<span class="ex">Writing</span> objects: 100% (3/3), <span class="ex">340</span> bytes <span class="kw">|</span> <span class="ex">0</span> bytes/s, done.
+<span class="ex">Total</span> 3 (delta 0), <span class="ex">reused</span> 0 (delta 0)
+<span class="ex">remote</span>:
+<span class="ex">remote</span>: Processing config.yaml in master branch:
+<span class="ex">remote</span>:     Created alias chris.smith@example.com -<span class="op">&gt;</span> chris@example.com
+<span class="ex">remote</span>:     Using sieve filter <span class="st">&quot;sieve/default.sieve&quot;</span> for mailbox <span class="st">&quot;chris@example.com&quot;</span>.
+<span class="ex">remote</span>:
+<span class="ex">To</span> https://developermail.io/git/examplecom
+  <span class="ex">dbd405..ebffd4a</span> master -<span class="op">&gt;</span> master</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <h3>Configure with Git</h3>
+        <p>
+          Developermail integrates perfectly into your daily developer life.
+          All configuration is done in YAML files which are stored in your
+          private git repository on our servers. Simply "git clone" and "git push" to update
+          configration settings.
+        </p>
+        <p><a href="/features#git">Learn how the Git configuration works.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Security &amp; Privacy</h3>
+        <p>
+          We value security and privacy like you do. Developermail uses battle tested encryption technologies
+          in order to keep your data safe. We will never sell your private data nor share it with third-parties for marketing purposes.
+        </p>
+        <p><a href="/security">Read more about security &amp; privacy.</a></p>
+      </div>
+      <div class="col-sm-6 center">
+      <img src="/assets/img/teaser-2.png" class="img-responsive teaser-img">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <p><img src="/assets/img/logo-fff.png" height="20">Developermail</p>
+        <p>Copyright &copy; 2014-2018</p>
+        <img src="/assets/img/gb_flag.png" height="20"/> <a href="/terms">Terms and conditions</a> &amp; <a href="/privacy">Privacy</a><br/>
+        <img src="/assets/img/de_flag.png" height="20"/> <a href="/agb">AGB</a> &amp; <a href="/datenschutz">Datenschutzerklärung</a>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Product</h6>
+        <ul>
+          <li><a href="/pricing"><i class="fa fa-dollar"></i> Pricing</a></li>
+          <li><a href="/features"><i class="fa fa-gift"></i> Features</a></li>
+          <li><a href="/security"><i class="fa fa-shield"></i> Security</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/legal_notice"><i class="fa fa-legal"></i> Legal notice</a></li>
+          <li><a href="https://twitter.com/devmailio"><i class="fa fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Help</h6>
+        <ul>
+          <li><a href="/docs" target="_blank"><i class="fa fa-flag"></i> Getting started</a></li>
+          <li><a href="/support"><i class="fa fa-support"></i> Support</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript" src="/assets/js/main.js?f6b4aaa"></script>
+    <script type="text/javascript">
+      angular.module('app', ['app.pricing', 'app.update-account']);
+    </script>
+  </body>
+</html>

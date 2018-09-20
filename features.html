@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org" ng-app="app">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mail, calendar and address book as a service for developers.">
+    <meta name="author" content="Developermail">
+    <link rel="icon" href="/assets/img/favicon.ico">
+
+
+      <title>Developermail - Features</title>
+
+
+    <link href="/assets/css/styles.css?f6b4aaa" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/config.js"></script>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-default" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/assets/img/logo-fff.png" height="30" style="margin-top: -7px">
+        Developermail
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="top-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/features"><span>Features</span></a></li>
+        <li><a href="/pricing"><span>Pricing</span></a></li>
+        <li><a href="/security"><span>Security</span></a></li>
+        <li><a href="/docs" target="_blank"><span>Docs</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+    <div class="main features">
+  <div class="container">
+    <div class="row center">
+      <div class="col-sm-12">
+        <h1>Feature Tour</h1>
+        <p class="lead">Are you missing some features? Please contact us!</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <a name="mail"></a>
+        <h2>Mailboxes</h2>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-paper-plane-o"></i></div>
+      <div class="col-sm-7">
+        <h4>A great mailbox, with a lot more features to come</h4>
+        <p>
+          Every mailbox supports custom sieve scripts to sort your incoming mail, and a tailored
+          spamfiltering solution, which autolearns what you think is spam.
+          Simply move emails in and out of your spam folder, to adapt the system.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-calendar-o"></i></div>
+      <div class="col-sm-7">
+        <h4>Included calendars and address book</h4>
+        <p>
+          Unlimited calendars (CalDAV) and an address book (CardDAV) included in every mailbox.
+          Keep your appointments and contacts synced between all your devices.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-unlink"></i></div>
+      <div class="col-sm-7">
+        <h4>IMAP, SMTP, CalDAV and Git endpoints</h4>
+        <p>
+          We will provide you all necessary endpoints for your mail clients.
+          All endpoints are available only via secure connections (HTTPS, STARTTLS).
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-globe"></i></div>
+      <div class="col-sm-7">
+        <h4>Use your own domain</h4>
+        <p>
+          You could use @developermail.io for your new mailbox or your own domain. Using your own
+          domain requires that you have access to your domains DNS settings to set the required MX,
+          DKIM and SPF records.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-search-minus"></i></div>
+      <div class="col-sm-7">
+        <h4>We don't scan</h4>
+        <p>
+          We will never scan your mailbox for marketing or big-data purposes nor do we sell or share
+          your private data with third parties.<br/>
+          Unlike freemail services, with Developermail you don't pay with your data and privacy.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-laptop"></i></div>
+      <div class="col-sm-7">
+        <h4>Bring your own client (BYOC)</h4>
+        <p>
+          We believe that developers should use what they think are the best tools to get their work
+          done.
+          So please bring your own mail clients, with which you are familiar and that work for you.
+          We support the IMAP and SMTP standards, to make sure you can use our services with the
+          client you want. No vendor lock-ins!
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-tag"></i></div>
+      <div class="col-sm-7">
+        <h4>Address tag support</h4>
+        <p>
+          All mailboxes come with address tag support. You may specify tags to distinguish your
+          emails, and you can use them in your sieve rules to filter emails automatically.
+          Just append "+tag" to the user part of your email address.<br/>
+          Example: Emails to "john+work@developermail.io" will end up in the "john@developermail.io"
+          mailbox.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-flag"></i></div>
+      <div class="col-sm-7">
+        <h4>Sieve mail filtering rules</h4>
+        <p>
+          Store your Sieve mail filtering rules in your private Git repository.
+          As soon as you "git push", they're live.
+          This helps you to make sure that your mailbox always looks tidy, and makes sure your
+          mailbox looks the same on all clients at any time.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-code"></i></div>
+      <div class="col-sm-7">
+        <h4>Awesome new features to come!</h4>
+        <p>
+          We're developers, too. And as such we like building amazing stuff!
+          Stay tuned for awesome new features, like the ability of running automated scripts on your
+          emails. Think of things like writing markdown mails in vim and developermail converts them
+          automatically to HTML mails, your non-developer friends can read.
+          <i>Please note that this feature is not yet available.</i>
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <a name="startups"></a>
+        <h2>Great for Startups, too.</h2>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-rocket"></i></div>
+      <div class="col-sm-7">
+        <h4>Use Developermail in your company</h4>
+        <p>
+          Developermail is built for (surprise!) developers. Whether you want to use Developermail
+          privately or in your company, we got you covered.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-life-ring"></i></div>
+      <div class="col-sm-7">
+        <h4>SLA in the future</h4>
+        <p>
+          In the near future we will be able to offer SLA support packages to enterprise customers.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <a name="git"></a>
+        <h2>Git configuration</h2>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-magic"></i></div>
+      <div class="col-sm-7">
+        <h4>Sign up once, maintain mailboxes using YAML configuration files</h4>
+        <p>
+          You only have to sign up once and then can create, delete and manage further mailboxes via
+          configuration files (YAML).
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-code-fork"></i></div>
+      <div class="col-sm-7">
+        <h4>"git clone" and "git push"</h4>
+        <p>
+          All configuration of your Developermail account is done using Git.
+          Just commit and push your changes, and they're live!
+          The repositories are hosted securely on our own servers.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-history"></i></div>
+      <div class="col-sm-7">
+        <h4>Accountability logs</h4>
+        <p>
+          If you use Git for all configuration, you can use Git's build in features like "git log"
+          as accountability audit logs.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-cogs"></i></div>
+      <div class="col-sm-7">
+        <h4>Configure everything</h4>
+        <p>
+          Developermail feels like your very own self-hosted mailbox but takes away all server
+          maintenance hassle. Start thinking about optimizing your mailbox and forget about time
+          consuming server adminstration.
+        </p>
+      </div>
+    <div class="col-sm-4"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <a name="git"></a>
+        <br>
+        <h3>Check out some example configuration files:</h3>
+        <br>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-code-fork"></i></div>
+      <div class="col-sm-7">
+        <h4>Mailbox and domain configuration, using a plain YAML file</h4>
+        <p>
+          You can add aliases, forwards, mailboxes, sieve rules and even new domains using a
+          configuration YAML file. Push the changes, and they're live immediately!
+        </p>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-8 col-smoffset-1">
+        <div class="terminal">
+          <div class="bar">config.yaml</div>
+          <div class="sourceCode">
+            <pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="co"># Register klaus.smith@developermail.io</span>
+<span class="co"># Use the default sieve filter, and configure two additional aliases:</span>
+<span class="co"># klaus@developermail.io and ks@developermail.io.</span>
+<span class="co"># Finally, forward all email to another mailbox</span>
+<span class="fu">developermail.io:</span>
+  <span class="fu">klaus.smith:</span>
+    <span class="fu">sieve:</span><span class="at"> sieve/default.sieve</span>
+    <span class="fu">aliases:</span>
+      <span class="kw">-</span> klaus
+      <span class="kw">-</span> ks
+    <span class="fu">forwards:</span><span class="at"> </span><span class="kw">[</span>klaus@custom.com<span class="kw">]</span>
+
+<span class="co"># Manage your domain &quot;custom.com&quot; with developermail</span>
+<span class="co"># Use klaus@custom.com as a primary address,</span>
+<span class="co"># with the two aliases office@custom.com and support@custom.com</span>
+<span class="fu">custom.com:</span>
+  <span class="fu">klaus:</span>
+    <span class="fu">aliases:</span>
+      <span class="kw">-</span> office
+      <span class="kw">-</span> support
+
+<span class="co"># Catchalls are also supported!</span>
+<span class="fu">catch.me:</span>
+  <span class="fu">all:</span>
+    <span class="fu">aliases:</span><span class="at"> </span><span class="kw">[</span><span
+    class="st">&quot;@&quot;</span><span class="kw">]</span></code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-sm-1 center"><i class="hidden-xs fa fa-code-fork"></i></div>
+        <div class="col-sm-7">
+          <h4>Fully configurable sieve filter rules</h4>
+          <p>
+            You can specify custom mail filtering rules, or use one of the provided filtersets. Never get
+            overwhelmed by a full, unsorted mailbox again!
+          </p>
+        </div>
+      <div class="col-sm-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-8 col-smoffset-1">
+        <div class="terminal">
+          <div class="bar">default.sieve</div>
+          <div class="sourceCode">
+            <pre class="sourceCode c"><code class="sourceCode c">require <span class="st">&quot;fileinto&quot;</span>;
+require <span class="st">&quot;regex&quot;</span>;
+require <span class="st">&quot;imap4flags&quot;</span>;
+
+<span class="er"># Place all spam mails in &quot;Spam&quot; folder</span>
+<span class="cf">if</span> header :contains <span class="st">&quot;X-Spam&quot;</span> <span class="st">&quot;yes&quot;</span> {
+  setflag <span class="st">&quot;</span><span class="sc">\\</span><span class="st">Seen&quot;</span>;
+  fileinto <span class="st">&quot;Spam&quot;</span>;
+  stop;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Security and Privacy</h2>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-1 center"><i class="hidden-xs fa fa-shield"></i></div>
+      <div class="col-sm-7">
+        <h4>We value security and privacy</h4>
+        <p>Please <a href="/security">read more on our security page</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <p><img src="/assets/img/logo-fff.png" height="20">Developermail</p>
+        <p>Copyright &copy; 2014-2018</p>
+        <img src="/assets/img/gb_flag.png" height="20"/> <a href="/terms">Terms and conditions</a> &amp; <a href="/privacy">Privacy</a><br/>
+        <img src="/assets/img/de_flag.png" height="20"/> <a href="/agb">AGB</a> &amp; <a href="/datenschutz">Datenschutzerklärung</a>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Product</h6>
+        <ul>
+          <li><a href="/pricing"><i class="fa fa-dollar"></i> Pricing</a></li>
+          <li><a href="/features"><i class="fa fa-gift"></i> Features</a></li>
+          <li><a href="/security"><i class="fa fa-shield"></i> Security</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/legal_notice"><i class="fa fa-legal"></i> Legal notice</a></li>
+          <li><a href="https://twitter.com/devmailio"><i class="fa fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <h6>Help</h6>
+        <ul>
+          <li><a href="/docs" target="_blank"><i class="fa fa-flag"></i> Getting started</a></li>
+          <li><a href="/support"><i class="fa fa-support"></i> Support</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript" src="/assets/js/main.js?f6b4aaa"></script>
+    <script type="text/javascript">
+      angular.module('app', ['app.pricing', 'app.update-account']);
+    </script>
+  </body>
+</html>
